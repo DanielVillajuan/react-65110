@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <!-- <script>
+    function createNodoHtml(type,text, classNames, events){
+      const element = document.createElement(type);
+      const label = document.createTextNode(text);
+      // classNames -> "btn btn-primary background-black py-2"
+      const classNamesSplited = classNames.split(' ') // ["btn","btn-primary","background-black", "py-2"]
+      element.appendChild(label);
+      element.classList.add(...classNamesSplited); 
+      // { onClick: fn, onSarasa: fn }
+      Object.keys(events).forEach(clave => {
+        const claveLower = clave.toLowerCase()
+        element[claveLower] = events[clave]
+      })
+    
+      return element;
+    }
+    const root = document.querySelector('#root')
+    function saludar (){
+      console.log('Saludooooo')
+    }
+    function adios (){
+      console.log('adiooos')
+
+    }
+    const button = createNodoHtml(
+                        'button',
+                        'click aqui!!!!', 
+                        "btn btn-primary background-black py-2",
+                        { onClick: saludar, onFocus: adios }
+                      );
+    root.appendChild(button)
+  </script> -->
+  <script type="text/babel">
+    function MyComponent(props){
+      
+      const name = 'Saludar'
+      return (
+        <div>
+          <button onClick={props.onClick}>Hola como estas {props.miprop}</button>
+        </div>
+      )
+    }
+    const root = document.querySelector('#root')
+    const rootReact = ReactDOM.createRoot(root)
+
+    rootReact.render(
+      <MyComponent onClick={() => {console.log('Saludar')}} miprop={'mi custom prop'}/>
+    )
+  </script>
+  </html>
