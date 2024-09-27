@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Test</title>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-  <!-- <script>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Test</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<!-- // Desafio del Boton de clase 1
+<script>
+
+  const root = document.getElementById("root");
+
+  function createButton(texto = "Click aqui", clase = "" , id = "") {
+    const boton = document.createElement("button");
+    boton.className = clase;
+    boton.id = id;
+    boton.innerHTML = texto;
+    root.appendChild(boton);
+  }
+  createButton();
+  createButton("Hola");
+  createButton("Hola","Boton1","32746uyer");
+
+</script>
+-->
+
+<!-- // Ejemplos de Clase 1
+
+
+  <script>
     function createNodoHtml(type,text, classNames, events){
       const element = document.createElement(type);
       const label = document.createTextNode(text);
@@ -43,6 +67,11 @@
                       );
     root.appendChild(button)
   </script> -->
+
+
+<!-- //  Ejemplos de Clase 1
+    
+
   <script type="text/babel">
     function MyComponent(props){
       
@@ -59,5 +88,6 @@
     rootReact.render(
       <MyComponent onClick={() => {console.log('Saludar')}} miprop={'mi custom prop'}/>
     )
-  </script>
-  </html>
+  </script> -->
+
+</html>

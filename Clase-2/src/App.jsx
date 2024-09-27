@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <nav></nav>
-      <Continer />
+      
       <fotter></fotter>
       <Button texto={texto} color={color} onClick={handleClick} />
     </div>
