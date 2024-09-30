@@ -13,8 +13,9 @@
 <body>
   <div id="root"></div>
 </body>
-<!-- // Desafio del Boton de clase 1
+<!-- 
 <script>
+  // Desafio del Boton de clase 1
 
   const root = document.getElementById("root");
 
@@ -32,42 +33,51 @@
 </script>
 -->
 
-<!-- // Ejemplos de Clase 1
+<!--
+<script>
+  // Ejemplos de Clase 1
 
+  // Root del index.html
+  const root = document.querySelector('#root')
 
-  <script>
-    function createNodoHtml(type,text, classNames, events){
-      const element = document.createElement(type);
-      const label = document.createTextNode(text);
-      // classNames -> "btn btn-primary background-black py-2"
-      const classNamesSplited = classNames.split(' ') // ["btn","btn-primary","background-black", "py-2"]
-      element.appendChild(label);
-      element.classList.add(...classNamesSplited); 
-      // { onClick: fn, onSarasa: fn }
-      Object.keys(events).forEach(clave => {
-        const claveLower = clave.toLowerCase()
-        element[claveLower] = events[clave]
-      })
-    
-      return element;
-    }
-    const root = document.querySelector('#root')
-    function saludar (){
-      console.log('Saludooooo')
-    }
-    function adios (){
-      console.log('adiooos')
+  // Declarar Funciones
+  // Funcion crear nodo en HTML.
+  function createNodoHtml(type, text, classNames, events) {
+    const element = document.createElement(type);
+    const label = document.createTextNode(text);
+    // classNames -> "btn btn-primary background-black py-2"
+    const classNamesSplited = classNames.split(' ') // ["btn","btn-primary","background-black", "py-2"]
+    element.appendChild(label);
+    element.classList.add(...classNamesSplited);
+    // { onClick: fn, onSarasa: fn }
+    Object.keys(events).forEach(clave => {
+      const claveLower = clave.toLowerCase()
+      element[claveLower] = events[clave]
+    })
 
-    }
-    const button = createNodoHtml(
-                        'button',
-                        'click aqui!!!!', 
-                        "btn btn-primary background-black py-2",
-                        { onClick: saludar, onFocus: adios }
-                      );
-    root.appendChild(button)
-  </script> -->
+    return element;
+  }
 
+  //  Funcion saludar por consola.
+  function saludar() {
+    console.log('Saludooooo')
+  }
+
+  // Funcion decir adios por consola.
+  function adios() {
+    console.log('adiooos')
+
+  }
+  // Invocacion de la funcion createNodoHtml y demas funciones.
+  const button = createNodoHtml(
+    'button',
+    'click aqui!!!!',
+    "btn btn-primary background-black py-2",
+    { onClick: saludar, onFocus: adios }
+  );
+  root.appendChild(button)
+</script>
+-->
 
 <!-- //  Ejemplos de Clase 1
     
