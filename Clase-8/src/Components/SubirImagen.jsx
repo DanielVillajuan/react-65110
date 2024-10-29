@@ -6,8 +6,8 @@ const SubirImagen = () => {
     const refStorage = ref(firebaseConfig.storage, "imagen");
     const fileSnap = await uploadBytes(refStorage, e.target.files[0]);
     const fileUrl = await getDownloadURL(fileSnap.ref);
-    console.log(fileUrl); // url del archivo subido a storage de firebase
-    // { desc: '', price: '', category: '', disccount: '', fileSrc: '' }
+    console.log(fileUrl);
+    console.log("Hola");
   };
 
   return (
