@@ -2,12 +2,12 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import firebaseConfig from "../config/firebase";
 
 const SubirImagen = () => {
+  // subir la imagen y obtener el url a travez de un boton y no de un input.
+  // Colocar codigo aqui
   const handleChange = async (e) => {
     const refStorage = ref(firebaseConfig.storage, "imagen");
     const fileSnap = await uploadBytes(refStorage, e.target.files[0]);
     const fileUrl = await getDownloadURL(fileSnap.ref);
-    console.log(fileUrl); // url del archivo subido a storage de firebase
-    // { desc: '', price: '', category: '', disccount: '', fileSrc: '' }
   };
 
   return (
